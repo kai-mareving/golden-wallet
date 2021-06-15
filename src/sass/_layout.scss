@@ -1,0 +1,23 @@
+body{
+  margin:0;
+  padding:150px 0 0 250px;
+  position:relative;
+}
+
+header.top{
+  width:100%;
+  background: black;
+  height:60px;
+  position:fixed;
+  top:0;
+  left:0;
+}
+
+header.sidebar{
+  width:150px;
+  background:blue;
+  position:fixed;
+  height:100%;
+  left:0;
+  top:0;
+}
