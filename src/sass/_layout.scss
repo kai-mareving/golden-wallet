@@ -26,9 +26,10 @@ header.sidebar{
 
   div.title {
     margin: 1em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include flex(row, inherit, space-between);
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
   }
 
   span {
@@ -50,9 +51,16 @@ section {
   background: $color-white;
 
   div.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex(column, center, center);
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+  }
+
+  a.btn {
+    &.btn-primary {
+      @include btn($brand-main-color, $color-white, $brand-main-color);
+    }
   }
 }
