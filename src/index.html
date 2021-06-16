@@ -1,18 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl-PL">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Golden Wallet</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"> -->
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
 </head>
 <body>
   <header class="top"></header>
-  <header class="sidebar"></header>
-  <section class="content">lorem ipsum
-    <h3>Wallet Content</h3>
+
+  <header class="sidebar">
+    <div class="container-fluid">
+
+      <div class="title">
+        <span class="logo">Just do it</span>
+        <!-- mark for sidebar trigger -->
+        <a href="#" class="sidebar-trigger" aria-label="sidebar trigger"><i class="fas fa-bars"></i></a>
+      </div>
+
+      <div class="row">
+        <ul class="list vertical">
+          <li><i class="far fa-star"></i><a href="#">General</a></li>
+          <li><i class="fas fa-network-wired"></i><a href="#">Details</a></li>
+          <li><i class="fas fa-link"></i><a href="#">Links</a></li>
+          <li><i class="far fa-object-group"></i><a href="#">Banners</a></li>
+          <li><i class="far fa-user"></i><a href="#">Personal data</a></li>
+          <li><i class="fas fa-credit-card"></i><a href="#">Payout</a></li>
+          <li><i class="far fa-share-square"></i><a href="#">Postback</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </header>
+
+  <section class="content">
+    <div class="title">
+      <h1>GENERAL STATISTICS</h1>
+    </div>
+    <div class="container">
+      <div class="row">
+        <h3>Date Picker</h3>
+      </div>
+      <div class="row">
+        <h3>Chart</h3>
+      </div>
+    </div>
   </section>
+
+  <section class="content">
+    <div class="title">
+      <h1>LINKS</h1>
+    </div>
+    <div class="container">
+      <div class="row">
+        <a href="#" class="btn btn-primary">+ Add New</a>
+      </div>
+      <div class="row">
+        <h3>Link list</h3>
+      </div>
+      <div class="row">
+        <a href="#" class="btn btn-secondary">+ Add New</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
+  <script src="/js/script.js"></script>
 </body>
 </html>

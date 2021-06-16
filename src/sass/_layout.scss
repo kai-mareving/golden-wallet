@@ -1,23 +1,58 @@
 body{
-  margin:0;
-  padding:150px 0 0 250px;
-  position:relative;
+  margin: 0;
+  padding: 100px 40px 0 290px;
+  position: relative;
+  background: $color-gray-white;
+  color: $color-gray-light;
 }
 
 header.top{
-  width:100%;
-  background: black;
-  height:60px;
-  position:fixed;
-  top:0;
-  left:0;
+  width: 100%;
+  background: $color-white;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 header.sidebar{
-  width:150px;
-  background:blue;
-  position:fixed;
-  height:100%;
-  left:0;
-  top:0;
+  width: 250px;
+  background: $color-gray-dark;
+  color: $color-gray-light;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  div.title {
+    margin: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  span {
+    font-family: $logo-font;
+    font-size: $title-font-size;
+    letter-spacing: -1px;
+    color: $color-white;
+  }
+
+  a .fa-bars {
+    color: $color-gray-middle;
+    font-size: 1.6em;
+  }
+}
+
+section {
+  margin: 0.2em;
+  padding: 0px !important;
+  background: $color-white;
+
+  div.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

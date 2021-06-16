@@ -1,3 +1,5 @@
+// @import "../vendor/bootstrap-grid.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import "variables";
 @import "mixins";
 
@@ -6,9 +8,10 @@
 
 /* Components */
 @import "components/form_field";
+@import "components/list";
 
 /* Sections */
-@import "section/registration_form";
+@import "sections/registration_form";
 
 /* Pages / Views */
 @import "pages/registration";

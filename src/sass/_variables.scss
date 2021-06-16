@@ -1,10 +1,21 @@
 /* Colors */
 $paragraph-color: #000000;
-$brand-main-color: #ff9100;
+$brand-main-color: #ff5100;
+$brand-secondary-color: #ff7b00;
+
+$color-gray-dark: #333333;
+$color-gray-middle: #666666;
+$color-gray-light: #979797;
+$color-gray-white: #E3E3E3;
+$color-white: #ffffff;
+$color-blue: #5db9e4;
+$color-green: #198b32;
 
 /* Font sizes */
 $paragraph-font-size: 16px;
+$title-font-size: $paragraph-font-size * 1.6;
 
 /* Fonts */
 $brand-font: "Open Sans", Helvetica, Arial;
 $paragraph-font: "Open Sans", Helvetica, Arial;
+$logo-font: "Pacifico", fantasy;
