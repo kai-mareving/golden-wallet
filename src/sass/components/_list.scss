@@ -13,14 +13,9 @@
 
       a {
         display: block;
-        color: $color-gray-middle;
         text-align: center;
         text-decoration: none;
         font-size: $paragraph-font-size * 1.4;
-
-        &:hover {
-          background-color: $color-gray-white;
-        }
       }
     }
   }

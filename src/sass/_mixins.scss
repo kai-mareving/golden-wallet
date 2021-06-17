@@ -5,14 +5,11 @@
   justify-content: $justify-content;
 }
 
-@mixin btn($btn-bg, $btn-text, $btn-border) {
+@mixin btn($btn-bg, $btn-text) {
   background: $btn-bg;
   color: $btn-text;
-  border-color: $btn-border;
   border-radius: 2px;
   display: inline-block;
-  border-width: 1px;
-  border-style: solid;
   padding: 12px;
   text-decoration: none;
   text-transform: uppercase;
@@ -20,5 +17,6 @@
 
   &:hover {
     background: lighten($btn-bg, 3%);
+    color: darken($btn-text, 3%);
   }
 }
