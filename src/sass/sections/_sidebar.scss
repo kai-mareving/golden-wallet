@@ -9,24 +9,29 @@ header.sidebar {
 
   //^ LOGO
   div.logo {
-    // margin: 0;
-    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 80%;
 
     span#logo {
+      flex: 60%;
       font-family: $logo-font;
       font-size: $title-font-size;
       letter-spacing: -1px;
       color: $color-white;
     }
-  }
 
-  div#sb-trigger{
-    flex: 4;
-  }
 
-  .fa-bars {
-    color: $color-gray-middle;
-    font-size: 1.8em;
+    #sb-trigger-link{
+      flex: 10%;
+      text-align: end;
+    }
+
+    .fa-bars {
+      color: $color-gray-middle;
+      font-size: 1.8em;
+    }
   }
   //^ LOGO END
 
@@ -38,13 +43,13 @@ header.sidebar {
     padding: 1em;
 
     i {
-      flex: 10%;
+      flex: 30%;
       color: $color-gray-middle;
       font-size: $paragraph-font-size * 1.5;
     }
 
     a {
-      flex: 80%;
+      flex: 70%;
       text-decoration: none;
       color: $color-gray-middle;
       font-size: $paragraph-font-size * 1.5;
