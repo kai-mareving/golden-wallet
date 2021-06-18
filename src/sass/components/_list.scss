@@ -7,15 +7,12 @@
     li {
       display: block;
       float: left;
-      width: 240px; /* adjust */
-      height: 50px; /* adjust */
-      line-height: 0px;
+      width: 100%;
 
       a {
-        display: block;
         text-align: center;
         text-decoration: none;
-        font-size: $paragraph-font-size * 1.4;
+        color: inherit;
       }
     }
   }

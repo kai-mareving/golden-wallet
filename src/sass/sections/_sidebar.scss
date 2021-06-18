@@ -1,0 +1,62 @@
+header.sidebar {
+  width: 250px;
+  background: $color-gray-dark;
+  color: $color-gray-light;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  //^ LOGO
+  div.logo {
+    // margin: 0;
+    flex: 1;
+
+    span#logo {
+      font-family: $logo-font;
+      font-size: $title-font-size;
+      letter-spacing: -1px;
+      color: $color-white;
+    }
+  }
+
+  div#sb-trigger{
+    flex: 4;
+  }
+
+  .fa-bars {
+    color: $color-gray-middle;
+    font-size: 1.8em;
+  }
+  //^ LOGO END
+
+  .sb-menu-item {
+    /* add style to this div? */
+    display: flex;
+    align-items: center;
+    height: 3em;
+    padding: 1em;
+
+    i {
+      flex: 10%;
+      color: $color-gray-middle;
+      font-size: $paragraph-font-size * 1.5;
+    }
+
+    a {
+      flex: 80%;
+      text-decoration: none;
+      color: $color-gray-middle;
+      font-size: $paragraph-font-size * 1.5;
+    }
+
+    &:hover {
+      background: $color-gray-middle;
+      border-left: 6px solid $brand-secondary-color;
+
+      a, i { color: $color-white; }
+    }
+
+  }
+
+}

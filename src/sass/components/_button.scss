@@ -1,0 +1,9 @@
+a.btn {
+  &.btn-primary {
+    @include btn($brand-main-color, $color-white);
+  }
+
+  &.btn-secondary {
+    @include btn($brand-secondary-color, $color-white);
+  }
+}

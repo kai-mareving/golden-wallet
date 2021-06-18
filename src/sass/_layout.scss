@@ -1,9 +1,8 @@
-/* Global */
-
+/* GLOBAL */
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -14,15 +13,30 @@ body {
   color: $color-gray-light;
 }
 
-div.flex-wrap {
+//# HELPERS: FLEX DIVS
+div.flex-row-wrap {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
 }
 
-div.flex-100 {
+div.flex-col-wrap {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+div.flex-row-100 {
+  display: flex;
+  flex-direction: row;
   flex: 100%;
 }
 
+div.flex-col-100 {
+  display: flex;
+  flex-direction: column;
+  flex: 100%;
+}
+
+//# HEADER BAR
 header.top {
   width: 100%;
   background: $color-white;
@@ -30,53 +44,6 @@ header.top {
   position: fixed;
   top: 0;
   left: 0;
-}
-
-header.sidebar {
-  width: 250px;
-  background: $color-gray-dark;
-  color: $color-gray-light;
-  position: fixed;
-  height: 100%;
-  left: 0;
-  top: 0;
-
-  div.logo {
-    margin: 1em;
-    flex: 1;
-
-    span#logo {
-      font-family: $logo-font;
-      font-size: $title-font-size;
-      letter-spacing: -1px;
-      color: $color-white;
-    }
-  }
-
-  div#sb-trigger{
-    flex: 4;
-  }
-
-  .fa-bars {
-    color: $color-gray-middle;
-    font-size: 1.6em;
-  }
-
-  li > i {
-      color: $color-gray-middle;
-      font-size: 0.7em;
-      position: absolute;
-      left: 10%;
-      transform: translate(-30%, 70%);
-      /* need to make <a> do the same */
-
-      &:hover {
-        background: $color-gray-middle;
-
-        a, i { color: $color-white; }
-      }
-  }
-
 }
 
 section {
@@ -90,15 +57,5 @@ section {
     // flex-direction: column;
     // justify-content: center;
     // align-items: center;
-  }
-}
-
-a.btn {
-  &.btn-primary {
-    @include btn($brand-main-color, $color-white);
-  }
-
-  &.btn-secondary {
-    @include btn($brand-secondary-color, $color-white);
   }
 }
