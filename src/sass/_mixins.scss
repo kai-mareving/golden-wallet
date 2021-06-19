@@ -5,15 +5,14 @@
   justify-content: $justify-content;
 }
 
+@mixin spacing($margin, $padding) {
+  margin: $margin;
+  padding: $padding;
+}
+
 @mixin btn($btn-bg, $btn-text) {
   background: $btn-bg;
   color: $btn-text;
-  border-radius: 2px;
-  display: inline-block;
-  padding: 12px;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
 
   &:hover {
     background: lighten($btn-bg, 3%);

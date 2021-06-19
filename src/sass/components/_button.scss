@@ -1,9 +1,19 @@
 a.btn {
+  display: inline-block;
+  @include spacing(0, 1.2em);
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
   &.btn-primary {
-    @include btn($brand-main-color, $color-white);
+    @include btn($brand-main-color, $gray-white-color);
+    /* font: font-style font-variant font-weight font-size/line-height font-family */
+    font: $paragraph-font-size*1.2 $paragraph-font;
   }
 
   &.btn-secondary {
-    @include btn($brand-secondary-color, $color-white);
+    @include btn($brand-secondary-color, $gray-white-color);
+    font: $paragraph-font-size*1.2 $paragraph-font;
   }
 }
