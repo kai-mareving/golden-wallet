@@ -19,7 +19,7 @@ header.sidebar {
       font-family: $logo-font;
       font-size: $title-font-size * 1.3;
       letter-spacing: -1.5px;
-      color: $gray-white-color;
+      color: $gray-hover-white-color;
     }
 
 
@@ -39,6 +39,7 @@ header.sidebar {
     display: flex;
     align-items: center;
     height: 3.5em;
+    border-left: 6px solid transparent;
 
     i {
       flex: 30%;
@@ -59,9 +60,30 @@ header.sidebar {
       background: $gray-secondary-color;
       border-left: 6px solid $brand-secondary-color;
 
-      a, i { color: $gray-white-color; }
+      a, i { color: $gray-hover-white-color; }
     }
 
+  }
+
+  .manager {
+    margin-top: 30px;
+    padding-top: 15px;
+    @include spacing(30 0 0 0, 15px 0 0 15px);
+    border-top: 2px solid;
+    border-color: $gray-secondary-color;
+
+    a {
+      text-decoration: none;
+      color: $blue-color;
+
+      &:hover {
+        color: $brand-secondary-color;
+      }
+    }
+
+    img {
+      padding-right: 15px;
+    }
   }
 
 }

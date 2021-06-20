@@ -1,7 +1,8 @@
 a.btn {
   display: inline-block;
-  @include spacing(0, 1.2em);
-  border-radius: 6px;
+  @include spacing(0, 0.6em);
+  width: 120px;
+  border-radius: 4px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
