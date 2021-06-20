@@ -7,13 +7,13 @@ a.btn {
   cursor: pointer;
 
   &.btn-primary {
-    @include btn($brand-main-color, $gray-white-color);
+    @include btn($brand-main-color, $gray-hover-white-color);
     /* font: font-style font-variant font-weight font-size/line-height font-family */
     font: $paragraph-font-size*1.2 $paragraph-font;
   }
 
   &.btn-secondary {
-    @include btn($brand-secondary-color, $gray-white-color);
+    @include btn($brand-secondary-color, $gray-hover-white-color);
     font: $paragraph-font-size*1.2 $paragraph-font;
   }
 }
