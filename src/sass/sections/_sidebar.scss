@@ -75,13 +75,7 @@ header.sidebar {
     a {
       display: flex;
       align-items: center;
-      text-decoration: none;
       font-size: $paragraph-font-size*1.3;
-      color: $blue-color;
-
-      &:hover {
-        color: $brand-secondary-color;
-      }
     }
 
     img {

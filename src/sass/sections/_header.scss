@@ -10,8 +10,7 @@ header.top {
   padding-left: 250px;
 
   div.menu {
-    @include flex(row, center, flex-end);
-    flex-wrap: nowrap;
+    @include flex(row, center, flex-end, null, nowrap);
     width: 100%;
     height: 70px;
 
@@ -23,10 +22,19 @@ header.top {
     }
 
     div.menu-link {
-      flex: 1;
+      @include flex(row, center, center, 1, null);
       height: 70px;
       border-left: 1px solid $gray-hover-light-color;
       text-align: center;
+      color: $gray-secondary-color;
+
+      a {
+        color: skyblue;
+
+        &:hover {
+          color: $brand-secondary-color;
+        }
+      }
 
       img {
         display: inline-block;
@@ -34,6 +42,21 @@ header.top {
         filter: opacity(50%);
         margin: 0 10px;
         background-color: white;
+        width: 15%;
+        height: auto;
+      }
+
+      img.img-small {
+        width: 8%;
+        height: auto;
+      }
+
+      #dot-orange {
+        border-radius: 50%;
+        background: $brand-main-color;
+        width: 10px;
+        height: 10px;
+        transform: translate(-180%, -80%);
       }
     }
   }
