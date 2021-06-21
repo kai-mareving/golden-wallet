@@ -22,6 +22,15 @@ h2 { font-size: $paragraph-font-size * 1.5; }
 
 h3 { font-size: $paragraph-font-size * 1.3; }
 
+section {
+  margin: 0.2em;
+  padding: 0px !important;
+  background: $white-color;
+
+  div.content {
+    @include flex(column, center, center);
+  }
+}
 
 //# HELPERS: FLEX DIVS
 div.flex-row-wrap {
@@ -43,56 +52,4 @@ div.flex-col-100 {
   display: flex;
   flex-direction: column;
   flex: 100%;
-}
-
-
-//# HEADER BAR
-header.top {
-  width: 100%;
-  background: $white-color;
-  color: $gray-hover-light-color;
-  position: fixed;
-  height: 70px;
-  top: 0;
-  left: 0;
-  padding-left: 250px;
-
-  div.menu {
-    @include flex(row, center, flex-end);
-    flex-wrap: nowrap;
-    width: 100%;
-    height: 70px;
-
-    div.menu-spacing {
-      flex: 8;
-      height: 70px;
-      background-color: $white-color;
-      align-items: stretch;
-    }
-
-    div.menu-link {
-      flex: 1;
-      height: 70px;
-      border-left: 1px solid $gray-hover-light-color;
-
-      img {
-        display: inline-block;
-        vertical-align: middle;
-        filter: opacity(50%);
-        margin: 0 10px;
-        background-color: white;
-      }
-    }
-  }
-}
-
-//# MAIN SECTION
-section {
-  margin: 0.2em;
-  padding: 0px !important;
-  background: $white-color;
-
-  div.content {
-    @include flex(column, center, center);
-  }
 }

@@ -1,0 +1,40 @@
+//# HEADER BAR
+header.top {
+  width: 100%;
+  background: $white-color;
+  color: $gray-hover-light-color;
+  position: fixed;
+  height: 70px;
+  top: 0;
+  left: 0;
+  padding-left: 250px;
+
+  div.menu {
+    @include flex(row, center, flex-end);
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 70px;
+
+    div.menu-spacing {
+      flex: 6;
+      height: 70px;
+      background-color: $white-color;
+      align-items: stretch;
+    }
+
+    div.menu-link {
+      flex: 1;
+      height: 70px;
+      border-left: 1px solid $gray-hover-light-color;
+      text-align: center;
+
+      img {
+        display: inline-block;
+        vertical-align: middle;
+        filter: opacity(50%);
+        margin: 0 10px;
+        background-color: white;
+      }
+    }
+  }
+}
