@@ -30,7 +30,7 @@ header.sidebar {
 
     .fa-bars {
       color: $gray-secondary-color;
-      font-size: $title-font-size * 1.2;
+      font-size: $title-font-size;
     }
   }
   //^ LOGO END
@@ -45,14 +45,14 @@ header.sidebar {
       flex: 30%;
       text-align: center;
       color: $gray-secondary-color;
-      font-size: $paragraph-font-size * 1.4;
+      font-size: $paragraph-font-size + 2px;
     }
 
     a {
       flex: 70%;
       text-decoration: none;
       color: $gray-secondary-color;
-      font-size: $paragraph-font-size * 1.4;
+      font-size: $paragraph-font-size + 2px;
       /* make letters narrower */
     }
 
@@ -83,4 +83,14 @@ header.sidebar {
     }
   }
 
+}
+
+@media (max-width: 768px) {
+  header.sidebar {
+    margin-left: -170px;
+
+    .sb-menu {
+      display: none;
+    }
+  }
 }

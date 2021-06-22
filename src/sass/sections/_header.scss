@@ -22,14 +22,19 @@ header.top {
     }
 
     div.menu-link {
-      @include flex(row, center, center, 1, null);
+      @include flex(row, center, center, 1, nowrap);
       height: 70px;
       border-left: 1px solid $gray-hover-light-color;
       text-align: center;
       color: $gray-secondary-color;
 
+      span {
+        padding-right: 10px;
+        white-space: nowrap;
+      }
+
       a {
-        color: skyblue;
+        color: $blue-lighter-color;
 
         &:hover {
           color: $brand-secondary-color;
@@ -40,14 +45,14 @@ header.top {
         display: inline-block;
         vertical-align: middle;
         filter: opacity(50%);
-        margin: 0 10px;
+        padding: 0 10px;
         background-color: white;
-        width: 15%;
+        width: auto;
         height: auto;
       }
 
       img.img-small {
-        width: 8%;
+        width: auto;
         height: auto;
       }
 
@@ -61,3 +66,23 @@ header.top {
     }
   }
 }
+
+@media (max-width: 768px) {
+  header.top {
+    padding-left: 250px-170px;
+
+    div.menu-spacing { display: none; }
+
+    span { display: none; }
+  }
+}
+
+/* @media (max-width: 576px) {
+  header.top {
+    padding-left: 250px-170px;
+
+    div.menu-spacing { display: none; }
+
+    span { display: none; }
+  }
+} */

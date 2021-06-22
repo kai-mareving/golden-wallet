@@ -1,0 +1,26 @@
+section#general {
+  .title {
+    border-bottom: 1px solid $gray-hover-light-color;
+    padding-left: 1.5em;
+    padding-top: 0.2em;
+    color: lighten($gray-hover-dark-color, 20%);
+  }
+
+  div.content {
+    div {
+      @include spacing(0, 20px 0);
+    }
+
+
+    #maxDate {
+      background-image: url('../../images/icons/calendar.png');
+      background-position: 120px 5px;
+      background-repeat: no-repeat;
+      background-size: 15px;
+    }
+  }
+}
+
+/* section#links {
+
+} */

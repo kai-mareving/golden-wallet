@@ -6,7 +6,7 @@
   <title>Golden Wallet</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
 </head>
 <body>
@@ -42,7 +42,7 @@
       </div>
       </div>
 
-      <div class="flex-col-wrap">
+      <div class="flex-col-wrap sb-menu">
         <div class="flex-col-100">
           <div class="sb-menu-item"><i class="far fa-star"></i><a href="#">General</a></div>
           <div class="sb-menu-item"><i class="fas fa-network-wired"></i><a href="#">Details</a></div>
@@ -54,7 +54,7 @@
         </div>
       </div>
 
-      <div class="flex-col-wrap">
+      <div class="flex-col-wrap sb-menu">
         <div class="flex-col-100 manager">
           <h3>YOUR MANAGER</h3>
           <a href="#"><img src="images/manager.png" alt="manager">Mikhael E.</a>
@@ -63,38 +63,65 @@
 
   </header>
 
-  <section class="flex-row-wrap">
+  <section id="general" class="flex-row-wrap">
+
     <div class="title">
-      <h2>GENERAL STATISTICS</h2>
+      <h3>GENERAL STATISTICS</h3>
     </div>
+
     <div class="content">
-      <div class="col-12">
-        <h3>Date Picker</h3>
-      </div>
-      <div class="col-12">
-        <h3>Chart</h3>
+      <div class="date-picker">
+        <input type="text" id="minDate">
+        <input type="text" id="maxDate">
+        <button type="button" class="btn btn-refresh">
+          <img src="images/icons/refresh.png" alt="refresh-button">
+        </button>
       </div>
     </div>
+
+    <!-- <div class="general-summary">
+      <div class="summary-row">
+        <div class="summary-col">
+          <div class="summary-text">Visit Signups</div>
+          <div class="summary-count">123</div>
+        </div>
+        <div class="summary-col">
+          <div class="summary-text">Net deposit</div>
+          <div class="summary-count">234</div>
+        </div>
+      </div>
+      <div class="summary-row">
+        <div class="summary-col">
+          <div class="summary-text">FTD</div>
+          <div class="summary-count">445</div>
+        </div>
+        <div class="summary-col">
+          <div class="summary-text">Turn over</div>
+          <div class="summary-count">432</div>
+        </div>
+      </div>
+    </div> -->
+
   </section>
 
-  <section class="flex-row-wrap">
+  <section id="links" class="flex-row-wrap">
     <div class="title">
-      <h2>LINKS</h2>
+      <h3>LINKS</h3>
     </div>
     <div class="content">
-      <div class="col-12">
+      <div class="flex-col-100">
         <a href="#" class="btn btn-primary">+ add new</a>
       </div>
-      <div class="col-12">
+      <div class="flex-col-100">
         <h3>Link list</h3>
       </div>
-      <div class="col-12">
+      <div class="flex-col-100">
         <a href="#" class="btn btn-secondary">+ add new</a>
       </div>
     </div>
   </section>
 
-  <!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="/js/script.js"></script>
 </body>
 </html>
