@@ -1,4 +1,4 @@
-a.btn {
+.btn {
   display: inline-block;
   @include spacing(0, 0.6em);
   width: 120px;
@@ -9,12 +9,19 @@ a.btn {
 
   &.btn-primary {
     @include btn($brand-main-color, $gray-hover-white-color);
-    /* font: font-style font-variant font-weight font-size/line-height font-family */
     font: $paragraph-font-size*1.2 $paragraph-font;
   }
 
   &.btn-secondary {
     @include btn($brand-secondary-color, $gray-hover-white-color);
     font: $paragraph-font-size*1.2 $paragraph-font;
+  }
+
+  &.btn-refresh {
+    @include btn($brand-secondary-color, $gray-hover-white-color);
+    width: 40px;
+    height: auto;
+
+    img { filter: invert(1); }
   }
 }
