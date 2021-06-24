@@ -78,6 +78,41 @@ section#general {
     }
   }
 
+  //todo
+  /* this-needs to have width=100%
+  -> achieve content placement differently so that its rwd friendly */
+  .chart-text {
+    width: 370px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    @include spacing(0, 20px 0);
+    color: lighten($gray-hover-dark-color, 20%);
+    font-weight: bold;
+  }
+
+  .chart-legend {
+    @include spacing(0, 20px 0);
+    @include flex(column, center, null, 100%, wrap);
+
+    .chartlegend-row {
+      width: 370px;
+      @include flex(row, center, space-around, null, wrap);
+
+      div.dot {
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+      }
+
+      #bigOrange { background: $brand-main-color; }
+
+      #bigBlue { background: $blue-color; }
+
+      #bigGreen { background: $green-color; }
+    }
+  }
+
 }
 
 //***** LINKS *****

@@ -24,4 +24,16 @@
 
     img { filter: invert(1); }
   }
+
+  &.btn-grey {
+    @include flex(row, center, space-evenly, null, nowrap);
+    @include btn($gray-hover-light-color, $gray-hover-dark-color);
+    width: auto;
+  }
+
+  &.btn-white {
+    @include flex(row, center, space-evenly, null, nowrap);
+    @include btn($white-color, $gray-hover-dark-color);
+    width: auto;
+  }
 }
