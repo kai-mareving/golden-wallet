@@ -1,6 +1,14 @@
 //***** GENERAL STATISTICS *****
+section {
+  background: $white-color;
+  @include flex(column, null, null, 100%, null);
+}
+
 section#general {
+  align-items: center;
+
   .title {
+    width: 100%;
     border-bottom: 1px solid $gray-hover-light-color;
     padding-left: 1.5em;
     padding-top: 0.2em;
@@ -8,6 +16,8 @@ section#general {
   }
 
   .date-wrapper {
+    width: 100%;
+    max-width: 700px;
     @include flex(column, center, center, 100%, wrap);
     border-bottom: 1px solid $gray-hover-light-color;
 
@@ -50,6 +60,8 @@ section#general {
 
 
   .general-summary {
+    width: 100%;
+    max-width: 700px;
     @include flex(null, center, center, null, wrap);
     min-height: 100%;
     padding: 10px;
@@ -82,16 +94,19 @@ section#general {
   /* this-needs to have width=100%
   -> achieve content placement differently so that its rwd friendly */
   .chart-text {
-    width: 370px;
+    width: 100%;
+    max-width: 640px;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: flex-start;
     @include spacing(0, 20px 0);
     color: lighten($gray-hover-dark-color, 20%);
     font-weight: bold;
   }
 
   .chart-legend {
+    width: 100%;
+    max-width: 700px;
     @include spacing(0, 20px 0);
     @include flex(column, center, null, 100%, wrap);
 
@@ -113,17 +128,76 @@ section#general {
     }
   }
 
+  .chart-container {
+    width: 100%;
+    max-width: 700px;
+    @include flex(column, center, center, null, null);
+    @include spacing(0, 20px 0);
+  }
+
 }
 
 //***** LINKS *****
 section#links {
   @include spacing(20px 0, 0);
+  align-items: center;
 
   .title {
+    width: 100%;
     border-bottom: 1px solid $gray-hover-light-color;
     padding-left: 1.5em;
     padding-top: 0.2em;
     color: lighten($gray-hover-dark-color, 20%);
+  }
+
+  .links-content {
+    @include flex(column, center, center, null, null);
+    @include spacing(0, 20px 0);
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .link-col {
+    width: 100%;
+    max-width: 500px;
+    @include spacing(0, 20px 0);
+  }
+
+  .link-row {
+    @include flex(row, center, center, 100%, nowrap);
+    border-bottom: 1px solid $gray-hover-light-color;
+
+    &:first-of-type { border-top: 1px solid $gray-hover-light-color; }
+
+    .link-text {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 3;
+
+      p { font-weight: bold; }
+    }
+
+    .link-icons {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex: 1;
+
+      img {
+        visibility: hidden;
+        @include spacing(0 2px,0);
+        width: 13px;
+        height: 13px;
+      }
+    }
+
+    &:hover {
+      background: $gray-hover-white-color;
+
+      .link-icons img { visibility: visible; }
+    }
+
   }
 }
 

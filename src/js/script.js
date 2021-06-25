@@ -20,10 +20,23 @@ const app = {
     return dateObj;
   },
 
+  hideSidebar: function() {
+    const thisApp = this;
+
+    thisApp.dom = {};
+    thisApp.dom.sidebarTrigger = document.getElementById('sb-trigger-link');
+    thisApp.dom.sidebarSection = document.querySelector('header.sidebar');
+
+    thisApp.dom.sidebarTrigger.addEventListener('click', function () {
+      thisApp.dom.sidebarSection.classList.toggle('closed');
+    });
+  },
+
   init: function () {
     const thisApp = this;
 
     thisApp.initDatePicker();
+    thisApp.hideSidebar();
   }
 };
 

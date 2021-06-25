@@ -15,6 +15,19 @@ body {
   font-size: $paragraph-font-size;
 }
 
+//***** HELPERS: FLEX DIVS *****
+div {
+  &.flex-row-wrap { display: flex;
+    flex-flow: row wrap; }
+
+  &.flex-col-wrap { display: flex;
+    flex-flow: column wrap; }
+
+  &.flex-row-100 { @include flex(row, center, center, 100%, null); }
+
+  &.flex-col-100 { @include flex(column, null, null, 100%, null); }
+}
+
 h1 { font-size: $title-font-size; }
 
 h2 { font-size: $paragraph-font-size * 1.5; }
@@ -26,41 +39,11 @@ a {
   font-size: inherit;
   color: $blue-color;
 
-  &:hover {
-    color: $brand-secondary-color;
-  }
+  &:hover { color: $brand-secondary-color; }
 }
 
-section {
-  background: $white-color;
-  @include flex(column, null, null, 100%, null);
 
-  div.content {
-    @include flex(column, center, center, null, null);
-    @include spacing(0, 20px 0);
-  }
-}
-
-//* HELPERS: FLEX DIVS
-div.flex-row-wrap {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-div.flex-col-wrap {
-  display: flex;
-  flex-flow: column wrap;
-}
-
-div.flex-row-100 {
-  @include flex(row, center, center, 100%, null);
-}
-
-div.flex-col-100 {
-  @include flex(column, null, null, 100%, null);
-}
-
-//* RWD
+//********** RWD **********
 @media (max-width: 768px) {
   body {
     margin: 0;
