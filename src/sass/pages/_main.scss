@@ -212,7 +212,6 @@ section#links {
 
     .summary-row {
       width: 100% !important;
-      @include flex(column, center !important, center !important, null, null);
     }
 
     .chart-text {
