@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  padding: 90px 40px 0 270px;
+  padding: 90px 20px 0 270px;
   position: relative;
   background: $gray-hover-white-color;
   color: $gray-hover-dark-color;
@@ -47,6 +47,8 @@ a {
 @media (max-width: 768px) {
   body {
     margin: 0;
-    padding: 90px 40px 0 100px;
+    padding: 90px 20px 0 100px;
+    position: relative;
+    margin-left: 0px;
   }
 }

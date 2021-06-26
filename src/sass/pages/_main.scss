@@ -90,9 +90,7 @@ section#general {
     }
   }
 
-  //todo
-  /* this-needs to have width=100%
-  -> achieve content placement differently so that its rwd friendly */
+
   .chart-text {
     width: 100%;
     max-width: 640px;
@@ -133,6 +131,10 @@ section#general {
     max-width: 700px;
     @include flex(column, center, center, null, null);
     @include spacing(0, 20px 0);
+
+    img {
+      width: 100% !important;
+    }
   }
 
 }
@@ -203,12 +205,27 @@ section#links {
 
 
 @media (max-width: 768px) {
-  .date-picker {
-    @include flex(column, center, center, null, wrap);
+  section#general {
+    .date-picker {
+      @include flex(column, center, center, 100%, wrap);
+    }
+
+    .summary-row {
+      width: 100% !important;
+      @include flex(column, center !important, center !important, null, null);
+    }
+
+    .chart-text {
+      justify-content: center !important;
+    }
+
+    .chartlegend-row {
+      width: 80% !important;
+      @include flex(row, center, space-around, null, wrap);
+    }
   }
 
-  .summary-row {
-    width: 100% !important;
-    @include flex(column, center !important, center !important, null, null);
-  }
+  /* section#links {
+    todo
+  } */
 }

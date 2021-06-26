@@ -28,6 +28,11 @@ header.top {
       text-align: center;
       color: $gray-secondary-color;
 
+      &:hover {
+        background: $gray-hover-white-color;
+        border-bottom: 1px solid $gray-hover-light-color;
+      }
+
       span {
         padding-right: 10px;
         white-space: nowrap;
