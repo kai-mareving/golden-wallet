@@ -92,14 +92,3 @@ header.sidebar {
   }
 
 }
-
-
-@media (max-width: 768px) {
-  header.sidebar {
-    margin-left: -170px;
-
-    .sb-menu {
-      display: none;
-    }
-  }
-}
