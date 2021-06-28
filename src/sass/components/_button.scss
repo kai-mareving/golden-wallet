@@ -23,6 +23,9 @@
     height: auto;
 
     img { filter: invert(1); }
+    &:hover {
+      img { transform: scale(1.2); }
+    }
   }
 
   &.btn-grey {

@@ -19,5 +19,6 @@
   &:hover {
     background: lighten($btn-bg, 3%);
     color: darken($btn-text, 3%);
+    transition: 1s;
   }
 }

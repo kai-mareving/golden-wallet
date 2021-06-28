@@ -47,7 +47,7 @@ section#general {
       #maxDate {
         width: 180px;
         background-image: url('../../images/icons/calendar.png');
-        background-position: 155px 10px;
+        background-position: 95% 45%;
         background-repeat: no-repeat;
         background-size: 15px;
 
@@ -209,6 +209,22 @@ section#links {
   section#general {
     .date-picker {
       @include flex(column, center, center, 100%, wrap);
+
+      input {
+        width: 90% !important;
+      }
+
+      #minDate {
+        border-right: (1px solid $gray-hover-light-color) !important;
+      }
+
+      #maxDate {
+        background-position-x: 97% !important;
+      }
+
+      .btn-refresh {
+        width: 90%;
+      }
     }
 
     .summary-row {
