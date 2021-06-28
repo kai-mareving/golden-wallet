@@ -13,6 +13,13 @@ body {
   color: $gray-hover-dark-color;
   font-family: $paragraph-font;
   font-size: $paragraph-font-size;
+
+  &.closed {
+    margin: 0;
+    padding: 90px 20px 0 100px;
+    position: relative;
+    margin-left: 0px;
+  }
 }
 
 //***** HELPERS: FLEX DIVS *****

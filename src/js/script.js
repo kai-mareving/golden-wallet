@@ -24,17 +24,20 @@ const app = {
     const thisApp = this;
 
     thisApp.dom = {};
+    thisApp.dom.pageBody = document.querySelector('body');
     thisApp.dom.sidebarTrigger = document.getElementById('sb-trigger-link');
     thisApp.dom.sidebarSection = document.querySelector('header.sidebar');
 
     window.addEventListener('resize', function () {
       if (screen.width <= 768) {
         thisApp.dom.sidebarSection.classList.add('closed');
+        thisApp.dom.pageBody.classList.add('closed');
       }
     });
 
     thisApp.dom.sidebarTrigger.addEventListener('click', function () {
       thisApp.dom.sidebarSection.classList.toggle('closed');
+      thisApp.dom.pageBody.classList.toggle('closed');
     });
   },
 

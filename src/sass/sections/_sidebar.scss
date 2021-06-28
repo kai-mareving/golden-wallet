@@ -1,13 +1,16 @@
 header.sidebar.closed {
   margin-left: -170px;
+  transition: margin-left 1s;
 
   .sb-menu {
     display: none;
+    transition-delay: display 2s;
   }
 }
 
 header.sidebar {
   width: 250px;
+  transition: 1s;
   background: darken($gray-primary-color, 10%);
   color: $gray-hover-dark-color;
   position: fixed;
