@@ -18,7 +18,7 @@
   }
 
   &.btn-cancel {
-    @include btn($gray-secondary-color, $white-color);
+    @include btn($gray-hover-dark-color, $white-color);
     font: $paragraph-font-size*1.2 $paragraph-font;
   }
 

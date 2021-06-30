@@ -61,33 +61,64 @@ a {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: $gray-primary-color; /* Fallback color */
+  background-color: rgba(51,51,51,0.6); /* Black w/ opacity */
   text-align: center;
+
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: $gray-hover-white-color;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
 }
 
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+#QuitModal .modal-content {
+    @include flex(column, center, flex-start, null, nowrap);
+    background-color: $gray-hover-white-color;
+    margin: 15% auto; // 15% from the top and centered
+    padding: 20px;
+    width: 30%; // Could be more or less, depending on screen size
+    // text-align: left;
+
+    span {
+      @include spacing(0,20px 10px);
+      width: 100%;
+
+      &.modal-text{
+        border-bottom: 1px solid $gray-hover-light-color;
+        text-align: left;
+      }
+      &.modal-buttons { width: 100%; text-align: right; }
+      a { margin-left: 15px; }
+    }
+  }
+
+
+#ManagerModal .modal-content {
+  @include flex(column, center, flex-start, null, nowrap);
+  background-color: $gray-hover-white-color;
+  margin: 10% 7%; // 15% from the top and centered
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
+  width: 70%; // Could be more or less, depending on screen size
+  height: 60%;
 
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
+  span {
+    width: 100%;
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+    &.modal-title {
+      border-bottom: 1px solid $gray-hover-light-color;
+      text-align: left;
+    }
+
+    &.modal-buttons {
+      @include flex(row, flex-end, null, 100%, nowrap);
+
+      a { flex: 8%; margin-left: 15px; }
+      input { flex: 92%; text-align: left; }
+    }
+  }
 }
 
 //********** RWD **********
@@ -97,5 +128,22 @@ a {
     padding: 90px 20px 0 100px;
     position: relative;
     margin-left: 0px;
+  }
+}
+@media (max-width: 576px) {
+  .modal {
+    width: 100vw !important;
+    .modal-content {
+      width: 80vw !important;
+    }
+  }
+
+  #QuitModal .modal-content {
+    span.modal-buttons {
+      display: inline-flex;
+      width: 100% !important; //doesn't work
+      justify-content: flex-end !important; //doesn't work
+      transform: scale(0.7);
+    }
   }
 }

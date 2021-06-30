@@ -42,47 +42,41 @@ const app = {
   },
 
   initModal: function () {
-    //or const modal = document.getElementsByClassName('modal');
-
     /* Get the button that opens the modal */
     const buttons = document.getElementsByClassName('modalOpener');
 
-
-
-    //or btn.onclick = function() { modal.style.display = 'block'; };
-    //* When the user clicks on the button, open the modal
+    /* When the user clicks on the button, open the modal */
     for (let btn of buttons) {
-      /* extract modal id from href attribute */
-      let modalID = btn.getAttribute('href');
-      /* cut out the hash */
-      modalID = modalID.substring(1);
-      /* Get the modal element */
-      const modal = document.getElementById(modalID);
+      let modalID = btn.getAttribute('href'); /* extract modal id from href attribute */
+      modalID = modalID.substring(1); /* cut out the hash */
+      const modal = document.getElementById(modalID); /* Get the modal element */
 
       /* Get the <a> element that closes the modal */
-      const quit = modal.querySelector('a[href*="quit"]');
-      const cancel = modal.querySelector('a[href*="cancel"]');
-      const send = modal.querySelector('a[href*="send"]');
+      const links = {};
+      links.quit = modal.querySelector('a[href*="quit"]');
+      links.cancel = modal.querySelector('a[href*="cancel"]');
+      links.send = modal.querySelector('a[href*="send"]');
 
       btn.onclick = function() {
         modal.style.display = 'block';
       };
 
       /* Close modal When the user clicks on any button inside it */
-      if (quit) {
-        quit.onclick = function () { modal.style.display = 'none'; };
+      if (links.quit) {
+        links.quit.onclick = function () { modal.style.display = 'none'; };
       }
-      if (cancel) {
-        cancel.onclick = function () { modal.style.display = 'none'; };
+      if (links.cancel) {
+        links.cancel.onclick = function () { modal.style.display = 'none'; };
       }
-      if (send) {
-        send.onclick = function () { modal.style.display = 'none'; };
+      if (links.send) {
+        links.send.onclick = function () { modal.style.display = 'none'; };
       }
 
       /* Close modal When user clicks anywhere outside of it */
       window.onclick = function (event) {
-        if (event.target.classList.contains('modal')) {
-          event.target.style.display = 'none';
+        const thisTarget = event.target;
+        if (thisTarget.classList.contains('modal')) {
+          thisTarget.style.display = 'none';
         }
       };
     }
