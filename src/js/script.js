@@ -41,11 +41,59 @@ const app = {
     });
   },
 
+  initModal: function () {
+    // Get the modal
+    // const modal = document.getElementsByClassName('modal');
+
+    // Get the button that opens the modal
+    const buttons = document.getElementsByClassName('modalOpener');
+
+    // Get the <a> element that closes the modal
+    const close = document.getElementById('quit');
+    const cancel = document.getElementById('cancel');
+    const send = document.getElementById('send');
+
+    ////btn.onclick = function() { modal.style.display = 'block'; };
+    // When the user clicks on the button, open the modal
+    for (let btn of buttons) {
+      let modalID = btn.getAttribute('href');
+      modalID = modalID.substring(1);
+      const modal = document.getElementById(modalID);
+      console.log(modal);
+
+      btn.onclick = function() {
+        modal.style.display = 'block';
+      };
+
+      // When the user clicks on <a> (quit), close the modal
+      close.onclick = function() {
+        modal.style.display = 'none';
+      };
+      // When the user clicks on <a> (cancel), close the modal
+      cancel.onclick = function() {
+        modal.style.display = 'none';
+      };
+      // When the user clicks on <a> (send), close the modal
+      send.onclick = function() {
+        modal.style.display = 'none';
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = 'none';
+        }
+      };
+    }
+
+  },
+
   init: function () {
     const thisApp = this;
 
     thisApp.initDatePicker();
     thisApp.hideSidebar();
+    thisApp.initModal();
   }
 };
 

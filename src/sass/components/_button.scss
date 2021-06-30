@@ -17,18 +17,24 @@
     font: $paragraph-font-size*1.2 $paragraph-font;
   }
 
+  &.btn-cancel {
+    @include btn($gray-secondary-color, $white-color);
+    font: $paragraph-font-size*1.2 $paragraph-font;
+  }
+
   &.btn-refresh {
     @include btn($brand-secondary-color, $gray-hover-white-color);
     width: 40px;
     height: auto;
 
     img { filter: invert(1); }
+
     &:hover {
-      img { transform: scale(1.2); }
+      img { transform: scale(1.1); }
     }
   }
 
-  &.btn-grey {
+  &.legend-gray {
     @include flex(row, center, space-evenly, null, nowrap);
     @include btn($gray-hover-white-color, $gray-hover-dark-color);
     width: auto;
@@ -36,7 +42,7 @@
     a { padding: 0 0 0 10px; }
   }
 
-  &.btn-white {
+  &.legend-white {
     @include flex(row, center, space-evenly, null, nowrap);
     @include btn($white-color, $gray-hover-dark-color);
     width: auto;

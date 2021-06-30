@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
 </head>
-<body>
+<body class="closed">
   <header class="top">
     <div class="menu">
       <div class="menu-spacing"></div>
@@ -27,12 +27,12 @@
         <span id="profile"><a href="#">Don Corleone</a></span>
       </div>
       <div class="menu-link">
-        <img src="images/icons/quit.png" alt="quit">
+        <a href="#QuitModal" class="modalOpener"><img src="images/icons/quit.png" alt="quit"></a>
       </div>
     </div>
   </header>
 
-  <header class="sidebar">
+  <header class="sidebar closed">
     <div class="flex-row-wrap">
       <div class="flex-row-100">
         <div class="logo">
@@ -57,7 +57,7 @@
       <div class="flex-col-wrap sb-menu">
         <div class="flex-col-100 manager">
           <h3>YOUR MANAGER</h3>
-          <a href="#"><img src="images/manager.png" alt="manager">Mikhael E.</a>
+          <a href="#ManagerModal" class="modalOpener"><img src="images/manager.png" alt="manager">Mikhael E.</a>
         </div>
       </div>
 
@@ -105,9 +105,9 @@
     <div class="chart-text">Earnings chart</div>
     <div class="chart-legend">
       <div class="chartlegend-row">
-        <div class="btn btn-grey"><div class="dot" id="bigBlue"></div><a href="#">Signups</a></div>
-        <div class="btn btn-grey"><div class="dot" id="bigOrange"></div><a href="#">FTD</a></div>
-        <div class="btn btn-white"><div class="dot" id="bigGreen"></div><a href="#">Earned</a></div>
+        <div class="btn legend-gray"><div class="dot" id="bigBlue"></div><a href="#">Signups</a></div>
+        <div class="btn legend-gray"><div class="dot" id="bigOrange"></div><a href="#">FTD</a></div>
+        <div class="btn legend-white"><div class="dot" id="bigGreen"></div><a href="#">Earned</a></div>
       </div>
     </div>
     <div class="chart-container">
@@ -211,6 +211,25 @@
       </div>
     </div>
   </section>
+
+  <!-- Quit Modal -->
+  <div id="QuitModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Do you really want to quit?</p>
+      <a href="#cancel" class="btn btn-cancel" id="cancel">Cancel</a>
+      <a href="#quit" class="btn btn-primary" id="quit">Quit</a>
+    </div>
+  </div>
+
+  <!-- Manager Modal -->
+  <div id="ManagerModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>What is your question?</p>
+      <a href="#send" class="btn btn-primary" id="send">Send</a>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="/js/script.js"></script>

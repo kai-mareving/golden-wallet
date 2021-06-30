@@ -250,8 +250,11 @@ section#links {
         @include spacing(0,2px 0);
         justify-content: center;
 
-        &:first-of-type { display: block;
-          text-align: center; }
+        &:first-of-type {
+          display: block;
+          width: 100%; //span doesnt take 100% width
+          text-align: center;
+        }
 
         &:last-of-type { justify-content: center !important; }
       }
