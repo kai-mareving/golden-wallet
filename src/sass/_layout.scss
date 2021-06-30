@@ -140,10 +140,14 @@ a {
 
   #QuitModal .modal-content {
     span.modal-buttons {
-      display: inline-flex;
-      width: 100% !important; //doesn't work
-      justify-content: flex-end !important; //doesn't work
-      transform: scale(0.7);
+      // width: 100% !important;
+
+      a {
+        display: inline;
+        margin: 0 !important;
+        // width: 100% !important;
+        // transform: scale(0.7);
+      }
     }
   }
 }
