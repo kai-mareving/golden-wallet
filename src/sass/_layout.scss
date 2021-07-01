@@ -100,32 +100,50 @@ a {
 
 
 #ManagerModal .modal-content {
-  @include flex(column, center, flex-start, null, nowrap);
+  @include flex(column, flex-start, flex-start, null, null);
   background-color: $gray-hover-white-color;
   margin: 10% 7%; // 15% from the top and centered
   padding: 20px;
   width: 70%; // Could be more or less, depending on screen size
   height: 60%;
 
-  span {
+  div.modal-title {
+    @include spacing(0,0 0 20px 0);
     width: 100%;
+    border-bottom: 1px solid $gray-hover-light-color;
+    text-align: left;
+  }
 
-    &.modal-title {
-      border-bottom: 1px solid $gray-hover-light-color;
+  div.modal-img {
+    width: 90%;
+    @include spacing(0,20px 0 0 0);
+    @include flex(row, center, flex-start, null, nowrap);
+
+    .modal-text { padding-left: 10px;}
+  }
+
+  div.modal-dialog {
+    @include flex(row, center, flex-start, 100%, nowrap);
+
+    p {
       text-align: left;
     }
+  }
 
-    &.modal-buttons {
-      @include flex(row, flex-end, null, 100%, nowrap);
+  div.modal-buttons {
+    @include flex(row, flex-end, space-between, 100%, wrap);
+    width: 100%;
 
-      a { flex: 8%;
-        margin-left: 15px; }
+    a {
+      flex: 2;
+      margin-left: 15px; }
 
-      input { flex: 92%;
-        text-align: left;
-        line-height: 2.1;
-        margin-bottom: 1px; }
-    }
+    input {
+      flex: 10;
+      // width: 750px;
+      text-align: left;
+      line-height: 2.1;
+      margin-bottom: 1px; }
   }
 }
 
@@ -152,6 +170,17 @@ a {
     .modal-buttons span a {
       display: inline;
       margin-left: 0 !important;
+    }
+  }
+
+  #ManagerModal {
+    .modal-buttons {
+      justify-content: center !important;
+
+      input, a {
+        width: 80vw !important;
+        margin: 0 !important;
+      }
     }
   }
 }
