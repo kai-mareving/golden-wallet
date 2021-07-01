@@ -99,7 +99,8 @@ header.sidebar {
 
 @media (max-width: 768px) {
   header.sidebar {
-   background: darken(rgba(51, 51, 51, 0.9), 10%);
-   i {color: $gray-hover-light-color !important;}
+    background: darken(rgba(51, 51, 51, 0.9), 10%);
+
+    i {color: $gray-hover-light-color !important;}
   }
 }

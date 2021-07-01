@@ -75,25 +75,28 @@ a {
 }
 
 #QuitModal .modal-content {
-    @include flex(column, center, flex-start, null, nowrap);
-    background-color: $gray-hover-white-color;
-    margin: 15% auto; // 15% from the top and centered
-    padding: 20px;
-    width: 30%; // Could be more or less, depending on screen size
-    // text-align: left;
+  @include flex(column, center, flex-start, null, nowrap);
+  background-color: $gray-hover-white-color;
+  margin: 15% auto; // 15% from the top and centered
+  padding: 20px;
+  width: 30%; // Could be more or less, depending on screen size
+  // text-align: left;
 
-    span {
-      @include spacing(0,20px 10px);
-      width: 100%;
+  span {
+    @include spacing(0,20px 10px);
+    width: 100%;
 
-      &.modal-text{
-        border-bottom: 1px solid $gray-hover-light-color;
-        text-align: left;
-      }
-      &.modal-buttons { width: 100%; text-align: right; }
-      a { margin-left: 15px; }
+    &.modal-text{
+      border-bottom: 1px solid $gray-hover-light-color;
+      text-align: left;
     }
+
+    &.modal-buttons { width: 100%;
+      text-align: right; }
+
+    a { margin-left: 15px; }
   }
+}
 
 
 #ManagerModal .modal-content {
@@ -115,8 +118,13 @@ a {
     &.modal-buttons {
       @include flex(row, flex-end, null, 100%, nowrap);
 
-      a { flex: 8%; margin-left: 15px; }
-      input { flex: 92%; text-align: left; }
+      a { flex: 8%;
+        margin-left: 15px; }
+
+      input { flex: 92%;
+        text-align: left;
+        line-height: 2.1;
+        margin-bottom: 1px; }
     }
   }
 }
@@ -130,24 +138,20 @@ a {
     margin-left: 0px;
   }
 }
+
 @media (max-width: 576px) {
   .modal {
     width: 100vw !important;
+
     .modal-content {
       width: 80vw !important;
     }
   }
 
   #QuitModal .modal-content {
-    span.modal-buttons {
-      // width: 100% !important;
-
-      a {
-        display: inline;
-        margin: 0 !important;
-        // width: 100% !important;
-        // transform: scale(0.7);
-      }
+    .modal-buttons span a {
+      display: inline;
+      margin-left: 0 !important;
     }
   }
 }

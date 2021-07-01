@@ -217,8 +217,8 @@
     <div class="modal-content">
       <span class="modal-text">Do you really want to Quit?</span>
       <span class="modal-buttons">
-        <a href="#cancel" class="btn btn-cancel" class="modal-cancel">Cancel</a>
-        <a href="#quit" class="btn btn-primary" class="modal-quit">Quit</a>
+        <a href="#cancel" class="btn btn-cancel modal-cancel">Cancel</a>
+        <a href="#quit" class="btn btn-primary modal-quit">Quit</a>
       </span>
     </div>
   </div>
@@ -226,10 +226,29 @@
   <!-- Manager Modal -->
   <div id="ManagerModal" class="modal">
     <div class="modal-content">
-      <span class="modal-title"><h3>ONLINE CHAT WITH YOUR PERSONAL MANAGER</h3></span>
+      <span class="modal-title">ONLINE CHAT WITH YOUR PERSONAL MANAGER</span>
+      <div class="modal-img">
+        <img src="./images/manager.png" alt="Your manager">
+        <span class="modal-text">Mikhael E.</span>
+      </div>
+      <div class="modal-dialog">
+          <p class="dialog answer">
+            What can I help you with today?
+          </p>
+        </div>
+        <div class="modal-dialog">
+          <p class="dialog response">
+            Who is asking?
+          </p>
+        </div>
+        <div class="modal-dialog last">
+          <p class="dialog answer">
+            Mikhael E.
+          </p>
+        </div>
       <span class="modal-buttons">
-        <input type="text" name="user-msg">
-        <a href="#send" class="btn btn-primary" class="modal-send">Send</a>
+        <input type="text" name="user-msg" placeholder="Enter your message">
+        <a href="#send" class="btn btn-primary modal-send">Send</a>
       </span>
     </div>
   </div>
