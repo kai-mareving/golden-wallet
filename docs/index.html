@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Golden Wallet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+</head>
+<body class="closed">
+  <header class="top">
+    <div class="menu">
+      <div class="menu-spacing"></div>
+      <div class="menu-link">
+        <img src="images/icons/wallet.png" alt="wallet">
+        <span id="cash">$1500,00</span>
+        <img class="img-small" src="images/icons/arrow-down.png" alt="arrow-down">
+      </div>
+      <div class="menu-link">
+        <img src="images/icons/notification.png" alt="notification">
+        <div id="dot-orange">.</div>
+      </div>
+      <div class="menu-link">
+        <img src="images/icons/profile.png" alt="profile">
+        <span id="profile"><a href="#">Don Corleone</a></span>
+      </div>
+      <div class="menu-link">
+        <a href="#QuitModal" class="modalOpener"><img src="images/icons/quit.png" alt="quit"></a>
+      </div>
+    </div>
+  </header>
+
+  <header class="sidebar closed">
+    <div class="flex-row-wrap">
+      <div class="flex-row-100">
+        <div class="logo">
+          <span id="logo">Just do it</span>
+          <a href="#" id="sb-trigger-link" aria-label="sidebar trigger"><i class="fas fa-bars"></i></a>
+        </div>
+      </div>
+      </div>
+
+      <div class="flex-col-wrap sb-menu">
+        <div class="flex-col-100">
+          <div class="sb-menu-item"><i class="far fa-star"></i><a href="#">General</a></div>
+          <div class="sb-menu-item"><i class="fas fa-network-wired"></i><a href="#">Details</a></div>
+          <div class="sb-menu-item"><i class="fas fa-link"></i><a href="#">Links</a></div>
+          <div class="sb-menu-item"><i class="far fa-object-group"></i><a href="#">Banners</a></div>
+          <div class="sb-menu-item"><i class="far fa-user"></i><a href="#">Personal data</a></div>
+          <div class="sb-menu-item"><i class="fas fa-credit-card"></i><a href="#">Payout</a></div>
+          <div class="sb-menu-item"><i class="far fa-share-square"></i><a href="#">Postback</a></div>
+        </div>
+      </div>
+
+      <div class="flex-col-wrap sb-menu">
+        <div class="flex-col-100 manager">
+          <h3>YOUR MANAGER</h3>
+          <a href="#ManagerModal" class="modalOpener"><img src="images/manager.png" alt="manager">Mikhael E.</a>
+        </div>
+      </div>
+
+  </header>
+
+  <section id="general" class="flex-row-wrap">
+
+    <div class="title">
+      <h3>GENERAL STATISTICS</h3>
+    </div>
+
+    <div class="date-wrapper">
+      <div class="date-picker">
+        <input type="text" id="minDate">
+        <input type="text" id="maxDate">
+        <a href="#" class="btn btn-refresh">
+          <img src="images/icons/refresh.png" alt="refresh-button">
+        </a>
+      </div>
+    </div>
+
+    <div class="general-summary">
+      <div class="summary-row">
+        <div class="summary-col">
+          <div class="summary-text">Visit Signups</div>
+          <div class="summary-count">124</div>
+        </div>
+        <div class="summary-col">
+          <div class="summary-text">Net deposit</div>
+          <div class="summary-count">564</div>
+        </div>
+      </div>
+      <div class="summary-row">
+        <div class="summary-col">
+          <div class="summary-text">FTD</div>
+          <div class="summary-count">445</div>
+        </div>
+        <div class="summary-col">
+          <div class="summary-text">Turn over</div>
+          <div class="summary-count">432</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-text">Earnings chart</div>
+    <div class="chart-legend">
+      <div class="chartlegend-row">
+        <div class="btn legend-gray"><div class="dot" id="bigBlue"></div><a href="#">Signups</a></div>
+        <div class="btn legend-gray"><div class="dot" id="bigOrange"></div><a href="#">FTD</a></div>
+        <div class="btn legend-white"><div class="dot" id="bigGreen"></div><a href="#">Earned</a></div>
+      </div>
+    </div>
+    <div class="chart-container">
+      <!-- <img src="./images/chart.jpg" alt="chart" id="earnChart"> -->
+      <canvas id="myChart"></canvas>
+    </div>
+
+  </section>
+
+  <section id="links" class="flex-row-wrap">
+    <div class="title">
+      <h3>LINKS</h3>
+    </div>
+    <div class="links-content">
+      <div class="flex-col-100">
+        <a href="#" class="btn btn-primary">+ add new</a>
+      </div>
+      <div class="link-col flex-col-100">
+        <div class="link-row">
+          <span>Home page</span>
+          <span><a href="#">http://www.homepage.com</a></span>
+          <span>
+            <img src="images/icons/link.png" class="icon hidden" alt="link">
+            <img src="images/icons/trash.png" class="icon hidden" alt="remove">
+          </span>
+        </div>
+        <div class="link-row">
+            <span>Currently offer</span>
+            <span><a href="#">http://www.currently.com</a></span>
+              <span>
+                  <img src="images/icons/link.png" class="icon hidden" alt="link">
+                  <img src="images/icons/trash.png" class="icon hidden" alt="remove">
+                </span>
+        </div>
+        <div class="link-row">
+            <span>Blurpix</span>
+            <span><a href="#">http://www.blurpix.com</a></span>
+            <span>
+                <img src="images/icons/link.png" class="icon hidden" alt="link">
+                <img src="images/icons/trash.png" class="icon hidden" alt="remove">
+              </span>
+        </div>
+        <div class="link-row">
+            <span>Your Site</span>
+            <span><a href="#">http://www.yoursite.com</a></span>
+            <span>
+                <img src="images/icons/link.png" class="icon hidden" alt="link">
+                <img src="images/icons/trash.png" class="icon hidden" alt="remove">
+              </span>
+        </div>
+        <div class="link-row">
+            <span>Google</span>
+            <span><a href="http://www.google.com" target="_blank">http://www.google.com</a></span>
+            <span>
+                <img src="images/icons/link.png" class="icon hidden" alt="link">
+                <img src="images/icons/trash.png" class="icon hidden" alt="remove">
+              </span>
+        </div>
+        <div class="link-row">
+            <span>Facebook</span>
+            <span><a href="http://www.facebook.com" target="_blank">http://www.facebook.com</a></span>
+            <span>
+                <img src="images/icons/link.png" class="icon hidden" alt="link">
+                <img src="images/icons/trash.png" class="icon hidden" alt="remove">
+              </span>
+        </div>
+        <div class="link-row">
+            <span>Dashboard</span>
+            <span><a href="#">http://www.dashboard.com</a></span>
+            <span>
+                <img src="images/icons/link.png" class="icon hidden" alt="link">
+                <img src="images/icons/trash.png" class="icon hidden" alt="remove">
+              </span>
+        </div>
+        <div class="link-row">
+            <span>Blurax</span>
+            <span><a href="#">http://www.blurax.com</a></span>
+            <span>
+                <img src="images/icons/link.png" class="icon hidden" alt="link">
+                <img src="images/icons/trash.png" class="icon hidden" alt="remove">
+              </span>
+        </div>
+        <div class="link-row">
+            <span>Piece of Wine</span>
+            <span><a href="#">http://www.pieceofwine.com</a></span>
+            <span>
+                <img src="images/icons/link.png" class="icon hidden" alt="link">
+                <img src="images/icons/trash.png" class="icon hidden" alt="remove">
+              </span>
+        </div>
+        <div class="link-row">
+            <span>Twitter</span>
+            <span><a href="http://www.twitter.com" target="_blank">http://www.twitter.com</a></span>
+            <span>
+                <img src="images/icons/link.png" class="icon hidden" alt="link">
+                <img src="images/icons/trash.png" class="icon hidden" alt="remove">
+              </span>
+        </div>
+      </div>
+      <div class="flex-col-100">
+        <a href="#" class="btn btn-secondary">+ add new</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quit Modal -->
+  <div id="QuitModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-text">Do you really want to Quit?</span>
+      <span class="modal-buttons">
+        <a href="#cancel" class="btn btn-cancel modal-cancel">Cancel</a>
+        <a href="#quit" class="btn btn-primary modal-quit">Quit</a>
+      </span>
+    </div>
+  </div>
+
+  <!-- Manager Modal -->
+  <div id="ManagerModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-title">ONLINE CHAT WITH YOUR PERSONAL MANAGER</div>
+      <div class="modal-img">
+        <img src="./images/manager.png" alt="Your manager">
+        <h3 class="modal-text">Mikhael E.</h3>
+      </div>
+      <div class="modal-dialog">
+          <p class="dialog answer">
+            What can I help you with today?
+          </p>
+        </div>
+        <div class="modal-dialog">
+          <p class="dialog response">
+            Who is asking?
+          </p>
+        </div>
+        <div class="modal-dialog">
+          <p class="dialog answer">
+            Mikhael E.
+          </p>
+        </div>
+      <div class="modal-buttons">
+        <input type="text" name="user-msg" placeholder="Enter your message">
+        <a href="#send" class="btn btn-primary modal-send">Send</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="/js/script.js"></script>
+</body>
+</html>
