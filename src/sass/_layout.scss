@@ -58,6 +58,7 @@ a {
   z-index: 11; /* Sit on top */
   left: 0;
   top: 0;
+  margin: auto;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
@@ -77,10 +78,9 @@ a {
 #QuitModal .modal-content {
   @include flex(column, center, flex-start, null, nowrap);
   background-color: $gray-hover-white-color;
-  margin: 15% auto; // 15% from the top and centered
+  margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
-  width: 30%; // Could be more or less, depending on screen size
-  // text-align: left;
+  max-width: 500px;
 
   span {
     @include spacing(0,20px 10px);
@@ -102,10 +102,10 @@ a {
 #ManagerModal .modal-content {
   @include flex(column, flex-start, flex-start, null, null);
   background-color: $gray-hover-white-color;
-  margin: 10% 7%; // 15% from the top and centered
+  margin: 10% 7%;
   padding: 20px;
-  width: 70%; // Could be more or less, depending on screen size
-  height: 60%;
+  max-width: 800px;
+  height: 50vh;
 
   div.modal-title {
     @include spacing(0,0 0 20px 0);
@@ -129,9 +129,7 @@ a {
     border: 1px solid $gray-hover-dark-color;
     border-radius: 4px;
 
-    p {
-      text-align: left;
-    }
+    p { text-align: left; }
   }
 
   div.modal-buttons {
@@ -144,7 +142,6 @@ a {
 
     input {
       flex: 10;
-      // width: 750px;
       text-align: left;
       line-height: 2.1;
       margin-bottom: 1px; }
@@ -165,9 +162,7 @@ a {
   .modal {
     width: 100vw !important;
 
-    .modal-content {
-      width: 80vw !important;
-    }
+    .modal-content { width: 80vw !important; }
   }
 
   #QuitModal .modal-content {
