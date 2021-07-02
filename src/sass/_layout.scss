@@ -123,7 +123,11 @@ a {
   }
 
   div.modal-dialog {
-    @include flex(row, center, flex-start, 100%, nowrap);
+    @include spacing(2px 0,0 2px);
+    @include flex(row, center, flex-start, 30%, nowrap);
+    background: $gray-hover-light-color;
+    border: 1px solid $gray-hover-dark-color;
+    border-radius: 4px;
 
     p {
       text-align: left;
