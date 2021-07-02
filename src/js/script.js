@@ -91,7 +91,7 @@ const app = {
 
   renderChart: function () {
     const ctx = document.getElementById('myChart').getContext('2d');
-    // Chart.defaults.global.legend.labels.usePointStyle = true;
+    Chart.defaults.global.legend.labels.usePointStyle = true;
 
     // eslint-disable-next-line no-undef
     const chart = new Chart(ctx, {
@@ -127,7 +127,7 @@ const app = {
       },
       options: {
         legend: {
-          display: false,
+          display: true,
           position: 'top',
           labels: {
             fontColor: '#56819F',
