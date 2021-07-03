@@ -142,10 +142,12 @@ const app = {
   init: function () {
     const thisApp = this;
 
-    thisApp.initDatePicker();
+    if (window.location.href.indexOf('links.html') == -1) {
+      thisApp.initDatePicker();
+      thisApp.renderChart();
+    }
     thisApp.hideSidebar();
     thisApp.initModal();
-    thisApp.renderChart();
   }
 };
 
